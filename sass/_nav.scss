@@ -1,0 +1,210 @@
+.nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30px 15px;
+    top: 3%;
+    left: 100%;
+    width: 90%;
+    transition: 0.3s;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    z-index: 1;
+
+    @media(min-width: 1024px) {
+        flex-direction: row;
+        top: 55px;
+        left: 250px;
+        width: 75%;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    &__list {
+        width: 100%;
+        list-style: none;
+        border-bottom: 1px solid rgb(233, 233, 233);
+        padding-bottom: 20px;
+
+        @media(min-width: 1024px) {
+            display: flex;
+            width: auto;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        & .nav__link {
+            display: block;
+            width: 100px;
+            margin: 0 auto;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            font-family: 'Overpass', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 50px;
+
+            @media(min-width: 500px) {
+                font-size: 20px;
+                width: 120px;
+            }
+
+            @media(min-width: 780px) {
+                font-size: 22px;
+            }
+
+            @media(min-width: 1024px) {
+                line-height: 26px;
+                font-size: 18px;
+                margin: 0;
+                color: hsl(0, 0%, 90%) !important;
+
+                &:hover {
+                    color: hsl(0%, 0%, 100%) !important;
+                }
+            }
+
+            & .link-img {
+                width: 12px;
+                padding-left: 5px;
+
+                @media(min-width: 1024px) {
+                    display: none;
+                }
+            }
+
+            & .link-arrow {
+                display: none;
+
+                @media(min-width: 1024px) {
+                    display: inline;
+                    font-size: 14px;
+                    padding-left: 5px;
+                }
+            }
+        }
+
+        & .nav__item {
+            @media(min-width: 1024px) {
+                width: 120px
+            }
+
+            & .menu {
+                height: 0px;
+                overflow: hidden;
+
+                &__link {
+                    text-decoration: none;
+                    color: rgb(102, 102, 102);
+                    font-family: 'Overpass', sans-serif;
+                    font-weight: 600;
+                    font-size: 18px;
+                    padding: 10px 0;
+
+                    @media(min-width: 500px) {
+                        font-size: 20px;
+                    }
+
+                    @media(min-width: 780px) {
+                        font-size: 22px;
+                    }
+
+                    @media(min-width: 1024px) {
+                        font-size: 18px;
+
+                        &:hover {
+                            color: hsl(0%, 0%, 0%);
+                        }
+                    }
+                }
+            }
+
+            & .menu.active {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgb(243, 243, 243);
+                border-radius: 5px;
+                height: auto;
+                padding: 10px 0;
+
+            }
+        }
+    }
+
+    &__btn-log {
+        background-color: transparent;
+        width: 150px;
+        border-style: none;
+        padding: 30px 20px 15px;
+        font-size: 18px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 600;
+        cursor: pointer;
+
+        @media(min-width: 500px) {
+            font-size: 20px;
+        }
+
+        @media(min-width: 780px) {
+            font-size: 22px;
+        }
+
+        @media(min-width: 1024px) {
+            position: absolute;
+            top: -10px;
+            right: 130px;
+            width: auto;
+            padding: 10px 25px;
+            font-size: 16px;
+            color: hsl(0, 0%, 90%);
+        }
+    }
+
+    &__btn-sign {
+        background-color: transparent;
+        width: 150px;
+        border-style: none;
+        padding: 15px 20px;
+        border-radius: 30px;
+        background-image: linear-gradient(45deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        color: hsl(0, 0%, 100%);
+        font-size: 18px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 600;
+        cursor: pointer;
+
+        @media(min-width: 500px) {
+            font-size: 20px;
+        }
+
+        @media(min-width: 780px) {
+            font-size: 22px;
+        }
+
+        @media(min-width: 1024px) {
+            position: absolute;
+            top: -10px;
+            right: 0;
+            background-color: hsl(0, 0%, 100%);
+            background-image: none;
+            color: hsl(353, 100%, 62%);
+            width: auto;
+            padding: 10px 35px;
+            font-size: 16px;
+            transition: 0.2s;
+
+            &:hover {
+                background-color: hsl(355, 100%, 74%);
+                color: hsl(0, 0%, 90%);
+            }
+        }
+    }
+
+    &.active {
+        left: 5%;
+    }
+}

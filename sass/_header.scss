@@ -1,0 +1,168 @@
+.header {
+    position: relative;
+    background-image: linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    height: 650px;
+    border-radius: 0% 0% 0% 100px;
+    font-family: 'Overpass', sans-serif;
+    color: hsl(0, 0%, 100%);
+    overflow: hidden;
+
+    @media(min-width: 1024px) {
+        height: 550px;
+        box-sizing: border-box;
+        padding: 50px 100px 0;
+    }
+
+    & .span-line {
+        display: none;
+
+        @media(min-width: 1024px) {
+            display: inline;
+        }
+    }
+
+    & .first-line {
+        @media(min-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-29%, -25%);
+        width: auto;
+        height: 300%;
+
+        @media(min-width: 1024px) {
+            width: auto;
+            height: 450%;
+            bottom: 0;
+            top: auto;
+            left: 50%;
+            transform: translate(-35%, 36%);
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        top: 8%;
+        left: 5%;
+
+        @media(min-width: 1024px) {
+            top: 50px;
+            left: 100px;
+        }
+
+        & img {
+            width: 90%;
+        }
+    }
+
+    &__brg {
+        position: absolute;
+        top: 9%;
+        right: 4%;
+        background-color: transparent;
+        border-style: none;
+        width: 40px;
+        cursor: pointer;
+
+        @media(min-width: 1024px) {
+            display: none;
+        }
+
+        & .brg-img {
+            width: 90%;
+        }
+    }
+
+    &__h1 {
+        position: absolute;
+        width: 100%;
+        top: 35%;
+        left: 0;
+        text-align: center;
+
+        @media(min-width: 500px) {
+            font-size: 2.1rem;
+        }
+
+        @media(min-width: 780px) {
+            font-size: 2.3rem;
+            top: 33%;
+        }
+
+        @media(min-width: 1024px) {
+            font-size: 2.5rem;
+            top: 40%;
+        }
+    }
+
+    &__paragraph {
+        position: absolute;
+        top: 50%;
+        left: 15%;
+        right: 15%;
+        text-align: center;
+    }
+
+    &__start-btn {
+        position: absolute;
+        top: 70%;
+        left: 12%;
+        background-color: hsl(0, 0%, 100%);
+        border: 1px solid white;
+        padding: 10px 20px;
+        border-radius: 30px;
+        color: hsl(353, 100%, 62%);
+        font-family: 'Overpass', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        transition: 0.2s;
+        cursor: pointer;
+
+        @media(min-width: 1024px) {
+            top: 60%;
+            left: calc(50% - 150px);
+        }
+
+        &:hover {
+            @media(min-width: 1024px) {
+                border-color: transparent;
+                color: hsl(0, 0%, 100%);
+                background-color: hsl(355, 100%, 74%);
+            }
+        }
+
+    }
+
+    &__learn-btn {
+        position: absolute;
+        top: 70%;
+        right: 12%;
+        background-color: transparent;
+        border: 1px solid white;
+        padding: 10px 20px;
+        border-radius: 30px;
+        color: hsl(0, 0%, 100%);
+        font-family: 'Overpass', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        transition: 0.2s;
+        cursor: pointer;
+
+        @media(min-width: 1024px) {
+            top: 60%;
+            right: calc(50% - 150px);
+        }
+
+        &:hover {
+            @media(min-width: 1024px) {
+                background-color: hsl(0, 0%, 100%);
+                color: hsl(353, 100%, 62%);
+            }
+        }
+    }
+}
