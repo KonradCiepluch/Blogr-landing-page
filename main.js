@@ -3,13 +3,9 @@ const nav = document.querySelector('.nav');
 const brgIco = document.querySelector('.header__brg img');
 const links = document.querySelectorAll('.nav__link');
 
-btnBrg.addEventListener('click', (e) => {
+btnBrg.addEventListener('click', () => {
     nav.classList.toggle('active');
-    if(brgIco.getAttribute('src') === "/images/icon-hamburger.svg"){
-        brgIco.setAttribute('src', "/images/icon-close.svg");
-        brgIco.style.width = '70%';
-    } else  {   brgIco.setAttribute('src', "/images/icon-hamburger.svg")
-                brgIco.style.width = '90%'; }
+    btnBrg.classList.toggle('active');
 })
 
 document.body.addEventListener('click', ()  => {
