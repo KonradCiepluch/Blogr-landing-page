@@ -5,3 +5,6 @@ I used exact technologies:
 -HTML5 with BEM
 -CSS3 with pre-processor SCSS
 -JavaScript
+
+Live:
+https://konradciepluch.github.io/Blogr-landing-page/
